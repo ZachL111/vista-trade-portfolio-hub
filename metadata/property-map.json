@@ -1,0 +1,28 @@
+{
+  "repo": "vista-trade-portfolio-hub",
+  "language": "Zig",
+  "category": "Trading systems",
+  "goal": "Design a Zig verification harness for portfolio systems, covering constraint solving, bounded scenario files, and failure-oriented tests.",
+  "weights": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 161,
+    "watch": 111
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}

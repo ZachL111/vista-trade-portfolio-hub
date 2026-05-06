@@ -1,0 +1,17 @@
+{
+  "repo": "vista-trade-portfolio-hub",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 161,
+    "watch": 111
+  },
+  "terms": [
+    "spread pressure",
+    "fill risk",
+    "portfolio drift",
+    "quote width"
+  ]
+}
