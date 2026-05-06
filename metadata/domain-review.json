@@ -1,0 +1,73 @@
+{
+  "repo": "vista-trade-portfolio-hub",
+  "language": "Zig",
+  "category": "Trading systems",
+  "goal": "Design a Zig verification harness for portfolio systems, covering constraint solving, bounded scenario files, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "spread pressure",
+      "fill risk",
+      "portfolio drift",
+      "quote width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "spread pressure",
+      "signal": 65,
+      "slack": 26,
+      "drag": 28,
+      "confidence": 60,
+      "score": 132,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "fill risk",
+      "signal": 46,
+      "slack": 22,
+      "drag": 13,
+      "confidence": 86,
+      "score": 161,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "portfolio drift",
+      "signal": 56,
+      "slack": 20,
+      "drag": 18,
+      "confidence": 55,
+      "score": 133,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "quote width",
+      "signal": 60,
+      "slack": 20,
+      "drag": 13,
+      "confidence": 85,
+      "score": 186,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "spread pressure",
+      "signal": 89,
+      "slack": 24,
+      "drag": 27,
+      "confidence": 55,
+      "score": 176,
+      "lane": "ship"
+    }
+  ]
+}
